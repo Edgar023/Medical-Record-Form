@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Record Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="medical.css">
+</head>
+<body>
+    <main class="formContainer">
+    <header id="Heading">Medical Record Form</header>
+        <form class="medicalForm" action="#" method="post">
+            <section class="Sections">
+                <h2>Patient Information</h2>
+                <!-- Name section-->
+                <div class="row">
+                    <label for="fullName">Full Name:</label>
+                    <input id="fullName" name="fullName" type="text" placeholder="First Name, Last Name" required>
+                </div>
+                <!-- DOB section-->
+                <div class="row">
+                    <label for="dateOfBirth">Date Of Birth:</label>
+                    <input id="dateOfBirth" name="dateOfBirth" type="date" required>
+                </div>
+                <!-- Gender section-->
+                <div class="row">
+                    <label>Gender:</label>
+                    <div class="radioGroup">
+                        <label for="genderMale" class="choice">
+                            <input id="genderMale" type="radio" name="gender" value="Male" required>Male
+                        </label>
+                        <label for="genderFemale" class="choice">
+                            <input id="genderFemale" type="radio" name="gender" value="Female">Female
+                        </label>
+                        <label for="genderOther" class="choice">
+                            <input id="genderOther" type="radio" name="gender" value="Other">Other
+                        </label>
+                    </div>
+                </div>
+                <!-- Address section-->
+                <div class="row">
+                    <label for="address">Address: </label>
+                    <input type="text" placeholder="123 Main St" id="address" name="address">
+                </div>
+                <!-- Phone number section-->
+                <div class="row">
+                    <label for="phone">Phone Number: </label>
+                    <input id="phone" type="tel" name="phone" pattern="\(\d{3}\) \d{3}-\d{4}" placeholder="(123) 456-7890" required>
+                </div>
+                <!-- email section-->
+                <div class="row">
+                    <label for="email">Email: </label>
+                    <input id="email" type="email" name="email" placeholder="example@example.com" required>
+                </div>
+            </section>
+            <!--Category title-->
+            <section class="Sections">
+                <h2>Medical History</h2> 
+                <!-- illnesses section-->
+                <div class="row"> 
+                    <label for="illnesses">Previous Illnesses:</label> 
+                    <input id="illnesses" name="illnesses" type="text">
+                </div>
+                <!-- condition section-->
+                <div class="row">
+                    <label for="conditions">Chronic Conditions:</label>
+                    <input id="conditions" name="conditions" type="text"> 
+                </div>
+                <!-- surgery section-->
+                <div class="row">
+                    <label for="surgeries">Completed surgeries (if any):</label> 
+                    <input id="surgeries" name="surgeries" type="text">
+                </div>
+                <!-- allergy section-->
+                <div class="row">
+                    <label for="allergies">Allergies (if any):</label> 
+                    <input id="allergies" name="allergies" type="text">
+                </div>
+                <!-- medication section-->
+                <div class="row">
+                    <label for="medications">Current medications:</label> 
+                    <input id="medications" name="medications" type="text">
+                </div>
+            </section>
+            <!--Category title-->
+            <section class="Sections">
+                <h2>Vaccination</h2> 
+                <div class="vacRow"> 
+                    <label for="vaccineType1">1. Type of Vaccine:</label>
+                    <input id="vaccineType1" name="vaccineType1" type="text">
+                    <label class="vaccine" for="vaccineDate1">Date received:</label>
+                    <input id="vaccineDate1" name="vaccineDate1" type="date">
+                    <label class="vaccine" for="provider1">Healthcare Provider:</label>
+                    <input id="provider1" name="provider1" type="text">
+                </div>
+                <div class="vacRow"> 
+                    <label for="vaccineType2">2. Type of Vaccine:</label>
+                    <input id="vaccineType2" name="vaccineType2" type="text">
+                    <label class="vaccine" for="vaccineDate2">Date received:</label>
+                    <input id="vaccineDate2" name="vaccineDate2" type="date">
+                    <label class="vaccine" for="provider2">Healthcare Provider:</label>
+                    <input id="provider2" name="provider2" type="text">
+                </div>
+                <div class="vacRow"> 
+                    <label for="vaccineType3">3. Type of Vaccine:</label>
+                    <input id="vaccineType3" name="vaccineType3" type="text">
+                    <label class="vaccine" for="vaccineDate3">Date received:</label>
+                    <input id="vaccineDate3" name="vaccineDate3" type="date">
+                    <label class="vaccine" for="provider3">Healthcare Provider:</label>
+                    <input id="provider3" name="provider3" type="text">
+                </div>
+            </section>
+            <!-- submit button-->
+            <div class="submit">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
